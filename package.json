@@ -1,0 +1,30 @@
+{
+  "name": "menamaps",
+  "version": "0.0.1",
+  "description": "Minimalist map art of MENA cities",
+  "main": "index.js",
+  "scripts": {
+    "version": "git add --all",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webmasterish/menamaps.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "webmasterish",
+    "email": "webmasterish@gmail.com",
+    "url": "https://webmasterish.com"
+  },
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "private": "true",
+  "homepage": "https://github.com/webmasterish/menamaps",
+  "bugs": {
+    "url": "https://github.com/webmasterish/menamaps/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
