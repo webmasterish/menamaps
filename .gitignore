@@ -61,9 +61,9 @@ build/
 coverage
 .nyc_output
 
-# locks
-package-lock.json
-yarn.lock
+# locks - they should be tracked for CI/CD processes like GitHub Actions
+#package-lock.json
+#yarn.lock
 
 # file containing environment variables such as secret api keys
 # used in conjunction with dotenv package
@@ -84,3 +84,9 @@ cache/
 
 # any credentials directory
 credentials/
+
+# ------------------------------------------------------------------------------
+# workflow related
+# ------------------------------------------------------------------------------
+
+**/workflow/*.config
