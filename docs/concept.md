@@ -140,6 +140,7 @@ Online shop selling minimalist map prints of Middle Eastern and North African ci
 - ✅ **TikTok:** https://www.tiktok.com/@menamaps.com
 - ✅ **Pinterest:** https://www.pinterest.com/menamaps/
 - ✅ **X (Twitter):** https://x.com/menamaps
+- ✅ **Reddit:** https://www.reddit.com/user/menamaps/
 
 ## Next Steps
 
