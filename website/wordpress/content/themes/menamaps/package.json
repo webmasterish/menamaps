@@ -1,6 +1,6 @@
 {
   "name": "menamaps_wordpress_theme",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "MENA Maps WordPress Theme",
   "scripts": {
     "dev": "node workflow/dev.js",
