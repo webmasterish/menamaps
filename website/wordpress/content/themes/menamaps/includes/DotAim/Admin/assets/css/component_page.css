@@ -1,0 +1,413 @@
+/* =============================================================================
+ * -----------------------------------------------------------------------------
+ * COMPONENT PAGE
+ * -----------------------------------------------------------------------------
+ * ========================================================================== */
+
+.dotaim_component_page {}
+
+
+
+/* =============================================================================
+ * -----------------------------------------------------------------------------
+ * COMMON - START
+ * -----------------------------------------------------------------------------
+ * ========================================================================== */
+
+.dotaim_component_page .dashicons-before::before {
+	font-size		: 1.2em;
+	width				: 1em;
+	height			: 1em;
+	line-height	: 1em;
+	margin			: 0 0.2em 0 0;
+}
+
+
+.dotaim_component_notice {}
+	.dotaim_component_page .submit .dotaim_component_notice {
+		flex: 0 100%;
+	}
+		.dotaim_component_page .submit .dotaim_component_notice:not(:first-child) {
+			margin-top: 15px;
+		}
+		.dotaim_component_page .submit .dotaim_component_notice:last-child {
+			margin-bottom: 5px;
+		}
+	.dotaim_component_notice.collapsible .collapsible_toggle {
+		cursor				: pointer;
+		border				: none;
+		border-radius	: 5px;
+		background		: none;
+	}
+		.dotaim_component_notice.collapsible .collapsible_toggle.dashicons-before::before {
+			margin	: 0;
+			content	: "\f140";
+		}
+		.dotaim_component_notice.collapsed .collapsible_toggle.dashicons-before::before {
+			content: "\f139";
+		}
+		.dotaim_component_notice.collapsed .notice_message {
+			display: none;
+		}
+			.dotaim_component_notice .notice_message pre {
+				white-space: pre-wrap;
+			}
+
+	.dotaim_component_notice.dismiss {
+		position: relative;
+	}
+		.dotaim_component_notice.dismiss .dismiss_button {
+			position	: absolute;
+			top				: 5px;
+			right			: 5px;
+			cursor		: pointer;
+		}
+			.dotaim_component_notice.dismiss .dismiss_button:hover {
+				color: var(--color_wp_orange);
+			}
+			body.no-js .dotaim_component_notice.dismiss .dismiss_button {
+				display: none;
+			}
+
+/* =============================================================================
+ * -----------------------------------------------------------------------------
+ * COMMON - END
+ * -----------------------------------------------------------------------------
+ * ========================================================================== */
+
+
+
+/* =============================================================================
+ * -----------------------------------------------------------------------------
+ * FIELDS - START
+ * -----------------------------------------------------------------------------
+ * ========================================================================== */
+
+.input_with_button {
+	display				: flex;
+	flex-direction: row;
+}
+	.input_with_button input {
+		margin-right: 2px;
+	}
+	.input_with_button button.dashicons-before {
+		line-height: 1em;
+	}
+	@media screen and (max-width: 782px) {
+		.input_with_button {
+			flex-direction: column;
+		}
+		.input_with_button > *:not(:last-child) {
+			margin-bottom: 2px;
+		}
+	}
+
+
+.post_found {
+	margin-left	: 2px;
+	color				: var(--color_wp_orange);
+}
+
+/* =============================================================================
+ * -----------------------------------------------------------------------------
+ * FIELDS - END
+ * -----------------------------------------------------------------------------
+ * ========================================================================== */
+
+
+
+/* =============================================================================
+ * -----------------------------------------------------------------------------
+ * FIELDS - array_field - START
+ * -----------------------------------------------------------------------------
+ * ========================================================================== */
+
+.array_field {}
+
+	.array_field_list {
+		list-style: none;
+		margin		: 0;
+		padding		: 0;
+	}
+		.array_field_item {
+			margin-bottom: 0.5rem;
+		}
+			.array_field_item:last-child {
+				margin-bottom: 1rem;
+			}
+
+			.array_field_item_header {
+				display					: flex;
+				gap							: 0.2rem;
+				justify-content	: space-between;
+				height					: 2em;
+				line-height			: 2em;
+				padding					: 0.25em;
+				border-radius		: 5px;
+				border					: 1px solid #cfcfcf;
+				text-shadow			: 1px 1px 1px #fff;
+				background			: #e1e1e1;
+				background			: linear-gradient(#ececec, #e1e1e1);
+			}
+				.array_field_list.ui-sortable .array_field_item_header {
+					cursor: move;
+				}
+					.array_field_list.ui-sortable .ui-state-highlight {
+						height				: 2.5em;
+						line-height		: 2.5em;
+						background		: #e1e1e1;
+						border-radius	: 5px;
+					}
+				.array_field_item_header_title {
+					flex					: 1;
+					white-space		: nowrap;
+					overflow			: hidden;
+					text-overflow	: ellipsis;
+				}
+					.array_field_item.collapsible .array_field_item_collapsible_toggle {
+						cursor				: pointer;
+						border				: none;
+						border-radius	: 5px;
+					}
+						.array_field_item.collapsible .array_field_item_collapsible_toggle.dashicons-before::before {
+							margin	: 0;
+							content	: "\f140";
+						}
+						.array_field_item.collapsed .array_field_item_collapsible_toggle.dashicons-before::before {
+							content: "\f139";
+						}
+
+				.array_field_item_header_actions {}
+					.array_field_item_header_actions .array_field_action {}
+
+			.array_field_item_settings {
+				padding		: 1rem;
+				margin-top: -0.2em;
+				border		: 1px solid #cfcfcf;
+				border-top: none;
+			}
+				.array_field_item.collapsed .array_field_item_settings {
+					display: none;
+				}
+				.array_field_item_settings > * {
+					margin-bottom: 0.5em;
+				}
+					.array_field_item_settings > *:last-child {
+						margin-bottom: 0;
+					}
+
+				.array_field_item_settings > table {}
+				.array_field_item_actions {}
+					.array_field_item_actions .array_field_action {}
+
+
+	.array_field_actions {}
+		.array_field_actions .array_field_action {}
+
+		.array_field button.array_field_action {
+			cursor			: pointer;
+			margin-right: 0.2rem;
+		}
+			.array_field button.array_field_action:last-child {
+				margin-right: 0;
+			}
+			button.array_field_action.no_text.dashicons-before::before {
+				margin: 0;
+			}
+			.array_field_action[data-action="item_add"],
+			.array_field_action[data-action="item_add"]:hover,
+			.array_field_action[data-action="item_add"]:focus {
+				color: var(--color_wp_green);
+			}
+			.array_field_action[data-action="item_clone"] {
+				color: var(--color_wp_blue);
+			}
+			.array_field_action[data-action="item_delete"],
+			.array_field_action[data-action="item_delete"]:hover,
+			.array_field_action[data-action="item_delete"]:focus,
+			.array_field_action[data-action="delete_all"],
+			.array_field_action[data-action="delete_all"]:hover,
+			.array_field_action[data-action="delete_all"]:focus {
+				color: var(--color_wp_red);
+			}
+
+/* =============================================================================
+ * -----------------------------------------------------------------------------
+ * FIELDS - array_field - END
+ * -----------------------------------------------------------------------------
+ * ========================================================================== */
+
+
+
+/* =============================================================================
+ * -----------------------------------------------------------------------------
+ * HEADER - START
+ * -----------------------------------------------------------------------------
+ * ========================================================================== */
+
+.dotaim_component_header_title {}
+	/*
+	.dotaim_component_header_title.dashicons-before::before {
+		font-size		: 1.2em;
+		width				: 1em;
+		height			: 1em;
+		line-height	: 1em;
+		margin			: 0 0.2em 0 0;
+	}
+	*/
+
+.dotaim_component_header_description {
+	font-size: 14px;
+}
+
+/* =============================================================================
+ * -----------------------------------------------------------------------------
+ * HEADER - END
+ * -----------------------------------------------------------------------------
+ * ========================================================================== */
+
+
+
+/* =============================================================================
+ * -----------------------------------------------------------------------------
+ * BODY - START
+ * -----------------------------------------------------------------------------
+ * ========================================================================== */
+
+.dotaim_component_body {}
+
+.dotaim_component_body .nav-tab-wrapper ul {
+	margin: 0;
+}
+	.dotaim_component_body .nav-tab-wrapper ul li {
+		margin: 0;
+	}
+	.dotaim_component_body .nav-tab-wrapper .nav-tab.dashicons-before::before {
+		vertical-align: middle;
+	}
+
+
+/* .dotaim_component_panels {} */
+
+
+/* .dotaim_component_panel {} */
+	.ui-tabs .dotaim_component_panel {
+		display: none;
+	}
+
+/* .dotaim_component_panel_section {} */
+
+	.dotaim_component_panel_section.collapsible .section_head::before {
+		content: "\f140";
+	}
+	.dotaim_component_panel_section.collapsed .section_head::before {
+		content: "\f139";
+	}
+	.dotaim_component_panel_section.collapsible .section_head .dashicons {
+		margin-right: 0.2em;
+	}
+
+	.dotaim_component_panel_section.collapsed .section_content {
+		display: none;
+	}
+
+	.dotaim_component_panel_section table.fixed .large-text,
+	.dotaim_component_panel_section table.fixed .regular-text,
+	.dotaim_component_panel_section table.fixed .small-text,
+	.dotaim_component_panel_section table.fixed .tiny-text,
+	.dotaim_component_panel_section table.fixed textarea,
+	.dotaim_component_panel_section table.fixed select {
+		max-width: 100%;
+	}
+	.dotaim_component_panel_section table.form-table.stacked > tbody > tr > th,
+	.dotaim_component_panel_section table.form-table.stacked > tbody > tr > td {
+		display	: block;
+		width		: auto;
+	}
+		.dotaim_component_panel_section table.form-table.stacked > tbody > tr > th {
+			padding				: 10px 0 0;
+			border-bottom	: 0;
+		}
+		.dotaim_component_panel_section table.form-table.stacked > tbody > tr > td {
+			margin-bottom	: 0;
+			padding				: 4px 0 6px;
+		}
+
+	.dotaim_component_panel_section table.form-table tr {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+		.dotaim_component_panel_section table.form-table tr:last-child,
+		.dotaim_component_panel_section table.form-table tr.no_separator {
+			border-bottom: 0;
+		}
+
+		.dotaim_component_panel_section table.form-table .select_checkbox.multi_columns {
+			height: auto;
+			width	: 100%;
+		}
+		.dotaim_component_panel_section table.form-table .select_checkbox ul {
+			margin: 0;
+		}
+			.dotaim_component_panel_section table.form-table .select_checkbox.multi_columns ul {
+				column-gap: 10px;
+			}
+
+		.dotaim_component_panel_section table.form-table .group_label {
+			cursor: default;
+		}
+
+		.dotaim_component_panel_section table.form-table td:only-child {
+			padding-left: 0;
+		}
+			.dotaim_component_panel_section table.form-table td:only-child > label {
+				display				: table;
+				margin-bottom	: 4px;
+				color					: #1d2327;
+				font-weight		: 500;
+			}
+
+		/* @todo: needs some fixing for first item */
+		.dotaim_component_panel_section table.form-table table.form-table tr:first-child > th,
+		.dotaim_component_panel_section table.form-table table.form-table tr:first-child > td {
+			padding-top: 0;
+		}
+
+		@media screen and (max-width: 782px) {
+			.dotaim_component_panel_section table.form-table table.form-table tr:first-child > * label {
+				display				: table;
+				margin-bottom	: 4px;
+			}
+		}
+
+	.dotaim_component_body .submit {
+		display					: flex;
+		justify-content	: space-between;
+		flex-wrap				: wrap;
+	}
+		@media screen and (max-width: 782px) {
+			.dotaim_component_body .submit {
+				flex-direction: column;
+			}
+		}
+
+/* =============================================================================
+ * -----------------------------------------------------------------------------
+ * BODY - END
+ * -----------------------------------------------------------------------------
+ * ========================================================================== */
+
+
+
+/* =============================================================================
+ * -----------------------------------------------------------------------------
+ * FOOTER - START
+ * -----------------------------------------------------------------------------
+ * ========================================================================== */
+
+.dotaim_component_footer {}
+
+/* =============================================================================
+ * -----------------------------------------------------------------------------
+ * FOOTER - END
+ * -----------------------------------------------------------------------------
+ * ========================================================================== */

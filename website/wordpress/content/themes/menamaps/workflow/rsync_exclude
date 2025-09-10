@@ -1,0 +1,75 @@
+# ------------------------------------------------------------------------------
+# generic
+# ------------------------------------------------------------------------------
+
+*~
+.Trash-*/
+
+*.DS_Store
+._*
+
+Desktop.ini
+Thumbs.db
+
+*.old
+*.bak
+*.BAK
+*.iso
+*.dmg
+*.7z
+*.gz
+*.rar
+*.tar
+*.zip
+*.log
+*.sql
+*.sqlite
+*.sass-cache*
+
+.v8flags*.json
+
+
+# system related
+lost+found/
+
+
+# version control
+.git/
+.github/
+.svn/
+.gitattributes
+.gitignore
+.editorconfig
+
+
+# nodejs
+node_modules/
+package.json
+package-lock.json
+yarn.lock
+*.config.js
+*.config.mjs
+
+
+# composer
+composer.json
+composer.lock
+
+
+# cache directories
+cache/
+Cache/
+.cache/
+.Cache/
+
+
+# ------------------------------------------------------------------------------
+# project related
+# ------------------------------------------------------------------------------
+
+__*
+logs.*
+logs/
+workflow/
+src/
+README.md

@@ -1,0 +1,74 @@
+.post_engagement_button {
+	@apply
+		flex items-center gap-0.5
+		font-medium text-sm text-center
+		hover:text-blue-500 dark:hover:text-blue-300;
+}
+	.post_engagement_button.engaged {
+		@apply text-blue-500;
+	}
+	.post_engagement_button_icon {
+		@apply p-1 rounded-full;
+	}
+	button.post_engagement_button:hover .post_engagement_button_icon,
+	a.post_engagement_button:hover .post_engagement_button_icon {
+		@apply bg-blue-100 dark:bg-blue-700;
+	}
+
+.post_engagement_button_upvote {
+	@apply hover:text-green-500 dark:hover:text-green-300;
+}
+	.post_engagement_button_upvote.engaged {
+		@apply text-green-500;
+	}
+	button.post_engagement_button_upvote:hover .post_engagement_button_icon {
+		@apply bg-green-100 dark:bg-green-700;
+	}
+
+.post_engagement_button_view {
+	@apply hover:text-neutral-500 dark:hover:text-neutral-300;
+}
+	button.post_engagement_button_view:hover .post_engagement_button_icon {
+		@apply bg-neutral-200 dark:bg-neutral-700;
+	}
+
+
+
+.engagement_bar.neutral .post_engagement_button {
+	@apply
+		text-neutral-500
+		hover:text-neutral-600 dark:hover:text-neutral-400;
+}
+	.engagement_bar.neutral .post_engagement_button.engaged {
+		@apply text-neutral-500;
+	}
+	.engagement_bar.neutral button.post_engagement_button:hover .post_engagement_button_icon,
+	.engagement_bar.neutral a.post_engagement_button:hover .post_engagement_button_icon {
+		@apply bg-neutral-100 dark:bg-neutral-700;
+	}
+
+.engagement_bar.primary .post_engagement_button {
+	@apply
+		text-primary-500
+		hover:text-primary-600 dark:hover:text-primary-400;
+}
+	.engagement_bar.primary .post_engagement_button.engaged {
+		@apply text-primary-500;
+	}
+	.engagement_bar.primary button.post_engagement_button:hover .post_engagement_button_icon,
+	.engagement_bar.primary a.post_engagement_button:hover .post_engagement_button_icon {
+		@apply bg-primary-100 dark:bg-primary-700;
+	}
+
+.engagement_bar.secondary .post_engagement_button {
+	@apply
+		text-secondary-500
+		hover:text-secondary-600 dark:hover:text-secondary-400;
+}
+	.engagement_bar.secondary .post_engagement_button.engaged {
+		@apply text-secondary-500;
+	}
+	.engagement_bar.secondary button.post_engagement_button:hover .post_engagement_button_icon,
+	.engagement_bar.secondary a.post_engagement_button:hover .post_engagement_button_icon {
+		@apply bg-secondary-100 dark:bg-secondary-700;
+	}

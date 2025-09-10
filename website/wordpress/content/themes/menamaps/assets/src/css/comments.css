@@ -1,0 +1,154 @@
+#comments {
+	@apply
+		max-w-2xl my-8 mx-auto
+		text-primary-900 dark:text-primary-100
+		pt-8 border-t border-primary-200 dark:border-primary-700;
+}
+
+.comments_title {
+	@apply text-2xl font-bold mb-8;
+}
+
+.comment_list .comment {
+	@apply mb-4
+}
+	.comment_list .comment.depth-1 {}
+	.comment_list .comment.depth-2 {
+		@apply ms-4;
+	}
+	.comment_list .comment.depth-3 {
+		@apply ms-8;
+	}
+	.comment_list .comment.depth-4 {
+		@apply ms-12;
+	}
+	.comment_list .comment.depth-5 {
+		@apply ms-16;
+	}
+	.comment_list .comment.depth-6,
+	.comment_list .comment.depth-7,
+	.comment_list .comment.depth-8,
+	.comment_list .comment.depth-9,
+	.comment_list .comment.depth-10 {
+		@apply ms-20;
+	}
+	.comment_list .comment .children {
+		@apply mt-4;
+	}
+
+.comment_body {
+	@apply
+		flex items-start gap-4 p-4
+		rounded-lg shadow-sm
+		bg-primary-100 dark:bg-primary-800;
+}
+	.comment.bypostauthor > .comment_body {
+		@apply bg-primary-200 dark:bg-primary-700;
+	}
+	/* @consider */
+	/*
+	.comment.odd .comment_body {}
+	.comment.even .comment_body {}
+	*/
+
+
+.comment_avatar {
+	@apply shrink-0;
+}
+
+.comment_content {
+	@apply flex-grow;
+}
+
+.comment_meta {
+	@apply mb-2 text-sm text-primary-700 dark:text-primary-200;
+}
+	.comment_meta cite {
+		@apply font-bold;
+	}
+	.comment_meta time {
+		@apply me-2 text-sm text-primary-600 dark:text-primary-300;
+	}
+
+.comment_text {
+	@apply text-primary-900 dark:text-primary-50;
+}
+
+.comment_reply {
+	@apply mt-2;
+}
+	.comment-reply-link,
+	.comment-reply-login {
+		@apply
+			text-sm
+			text-secondary-600 dark:text-secondary-500
+			hover:underline;
+	}
+
+.comment_navigation {
+	@apply my-4;
+}
+	.comment_navigation a {
+		@apply text-secondary-600 dark:text-secondary-500 hover:underline;
+	}
+
+#respond {
+	@apply
+		my-8 p-8
+		rounded-lg shadow-lg
+		bg-primary-200 dark:bg-primary-700;;
+}
+
+#respond .logged-in-as a,
+#respond .must-log-in a {
+	@apply text-secondary-600 dark:text-secondary-500 hover:underline;
+}
+
+.comment_reply_title {
+	@apply text-2xl font-bold mb-2;
+}
+	.comment_reply_title #cancel-comment-reply-link {
+		@apply ms-2 text-secondary-600 dark:text-secondary-500 hover:underline;
+	}
+
+.comment_form {
+	@apply flex flex-col gap-4;
+}
+	.comment_form .logged-in-as .required-field-message {
+		@apply ms-1 italic font-medium
+	}
+
+	.comment_form label {
+		@apply font-medium;
+	}
+	.comment_form input[type="text"],
+	.comment_form input[type="email"],
+	.comment_form input[type="url"],
+	.comment_form textarea {
+		@apply
+			text_field mt-2
+			bg-primary-50 dark:bg-primary-900
+			placeholder-primary-400 dark:placeholder-primary-700
+			text-primary-900 dark:text-primary-100
+			border-primary-400 dark:border-primary-600
+			focus:ring-primary-500 focus:border-primary-500
+			dark:focus:ring-primary-500 dark:focus:border-primary-500;
+	}
+	.comment_form input[type="checkbox"] {
+		@apply
+			rounded
+			text-primary-600
+			border-primary-200
+			focus:ring-2
+			focus:ring-primary-500
+			focus:border-primary-500
+			dark:bg-primary-900
+			dark:border-primary-700
+			dark:focus:ring-primary-500 dark:focus:border-primary-500
+			dark:ring-offset-neutral-900;
+	}
+		.comment_form input[type="checkbox"]:has(+ label) {
+			@apply me-1;
+		}
+
+	.comment_form .form-submit #submit {}

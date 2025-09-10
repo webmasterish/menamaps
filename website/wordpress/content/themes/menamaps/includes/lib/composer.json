@@ -1,0 +1,6 @@
+{
+    "require": {
+        "redeyeventures/geopattern": "^1.1",
+        "abraham/twitteroauth": "^4.0"
+    }
+}

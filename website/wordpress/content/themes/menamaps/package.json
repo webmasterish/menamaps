@@ -1,0 +1,42 @@
+{
+  "name": "menamaps_wordpress_theme",
+  "version": "0.0.1",
+  "description": "MENA Maps WordPress Theme",
+  "scripts": {
+    "dev": "node workflow/dev.js",
+    "dev_cleanup": "rm -f $npm_package_config_vite_dev_flag_file",
+    "build": "npm run dev_cleanup && vite build",
+    "deploy": "bash workflow/deploy.sh",
+    "wp_theme_version": "node workflow/version.js",
+    "wp_theme_deploy": "npm run deploy",
+    "remote_logs": "bash -c 'workflow/remote_logs_actions.sh $@' --"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "author": {
+    "name": "webmasterish",
+    "email": "webmasterish@gmail.com",
+    "url": "https://webmasterish.com"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@alpinejs/sort": "3.14.9",
+    "alpinejs": "3.14.9",
+    "autoprefixer": "10.4.20",
+    "flowbite": "2.5.2",
+    "flowbite-typography": "1.0.4",
+    "html-to-image": "1.11.13",
+    "htmx.org": "2.0.4",
+    "lodash": "4.17.21",
+    "postcss": "8.4.49",
+    "postcss-nested": "7.0.2",
+    "tailwindcss": "3.4.15",
+    "vite": "5.4.11",
+    "vite-plugin-live-reload": "3.0.3"
+  },
+  "config": {
+    "vite_dev_flag_file": "workflow/__vite_dev.flag"
+  }
+}

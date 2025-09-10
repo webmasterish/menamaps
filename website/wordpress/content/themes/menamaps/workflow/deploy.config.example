@@ -1,0 +1,18 @@
+# TODO: change to destination directory and uncomment
+
+#DEST_DIR="user@production-server:/path/to/remote/dir"
+
+# ------------------------------------------------------------------------------
+
+# if set will also skip NPM_RUN and COMPOSER_RUN
+
+RSYNC_DRY_RUN=
+
+# ------------------------------------------------------------------------------
+
+NPM_RUN_INSTALL=1
+NPM_RUN_BUILD=1
+
+# ------------------------------------------------------------------------------
+
+COMPOSER_RUN_INSTALL=1

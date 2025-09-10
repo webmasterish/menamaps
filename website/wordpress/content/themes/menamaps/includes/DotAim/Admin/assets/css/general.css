@@ -1,0 +1,70 @@
+/* =============================================================================
+ * -----------------------------------------------------------------------------
+ * COMMON - START
+ * -----------------------------------------------------------------------------
+ * ========================================================================== */
+
+:root {
+	/* @notes: the following are wp admin colors */
+	--color_wp_red			: #d63638;
+	--color_wp_green		: #00a32a;
+	--color_wp_blue			: #0073aa;
+	--color_wp_orange		: #d54e21;
+	--color_link				: var(--color_wp_blue);
+	--color_notification: var(--color_wp_orange);
+}
+
+
+.button_with_loader,
+.processing {
+	position: relative;
+}
+	.button_with_loader_loading .button_with_loader_text {
+		visibility: hidden;
+		opacity		: 0;
+	}
+	.button_with_loader_loading::after,
+	.processing::after {
+		content					: "";
+		position				: absolute;
+		width						: 1em;
+		height					: 1em;
+		top							: 0;
+		left						: 0;
+		right						: 0;
+		bottom					: 0;
+		margin					: auto;
+		border					: 4px solid transparent;
+		border-top-color: inherit;
+		border-radius		: 50%;
+		animation				: button_with_loader_loading_spinner 1s ease infinite;
+	}
+	@keyframes button_with_loader_loading_spinner {
+		from {
+			transform: rotate(0turn);
+		}
+
+		to {
+			transform: rotate(1turn);
+		}
+	}
+
+
+.wp-admin.edit-php .fixed .column-dotaim_post_thumbnail {
+	width			: 60px;
+	text-align: center;
+}
+	.wp-admin.edit-php #the-list .dotaim_post_thumbnail {
+		display							: block;
+		width								: 60px;
+		height							: 60px;
+		background-position	: center;
+		background-repeat		: no-repeat;
+		background-size			: cover;
+	}
+
+/* =============================================================================
+ * -----------------------------------------------------------------------------
+ * COMMON - END
+ * -----------------------------------------------------------------------------
+ * ========================================================================== */
