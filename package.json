@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "version": "git add --all",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "wp_theme_version": "node $npm_package_config_wp_theme_path/workflow/version.js",
+    "wp_theme_deploy": "bash $npm_package_config_wp_theme_path/workflow/deploy.sh"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,9 @@
     "url": "https://github.com/webmasterish/menamaps/issues"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
+  },
+  "config": {
+    "wp_theme_path": "website/wordpress/content/themes/menamaps"
   }
 }

@@ -15,21 +15,14 @@ THEME_DIR=$(realpath "${SCRIPT_DIR}/..")
 
 source "${SCRIPT_DIR}/helpers.sh"
 
+[ -f "${SCRIPT_DIR}/deploy.config" ] && source "${SCRIPT_DIR}/deploy.config"
+
 # ------------------------------------------------------------------------------
 
 # destination directory
 
 # Use the first argument as DEST_DIR if provided
-if [ -n "$1" ]; then
-
-	DEST_DIR=$1
-
-elif [ -f "${SCRIPT_DIR}/deploy.config" ]; then
-
-	# If no argument provided, try to read from deploy.config
-	source "${SCRIPT_DIR}/deploy.config"
-
-fi
+[ -n "$1" ] && DEST_DIR=$1
 
 # If DEST_DIR is still not set
 # and the script is not running in an automated environment, prompt the user
@@ -37,6 +30,9 @@ fi
 
 # Check if DEST_DIR is set
 [ -z "$DEST_DIR" ] && echo -e "\n\u274c No destination directory set. Aborting.\n" && exit 1
+
+# Set dir to realpath
+DEST_DIR="$(realpath ${DEST_DIR})"
 
 # ------------------------------------------------------------------------------
 

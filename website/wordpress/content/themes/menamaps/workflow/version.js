@@ -102,7 +102,7 @@ function get_repo_root()
 // get_repo_root()
 
 const repo_root					= get_repo_root();
-const theme_path				= path.join( repo_root, 'app/wordpress/content/themes/menamaps' );
+const theme_path				= path.join( repo_root, 'website/wordpress/content/themes/menamaps' );
 const package_json_path	= path.join( theme_path, 'package.json' );
 const files_to_stage		= [];
 
